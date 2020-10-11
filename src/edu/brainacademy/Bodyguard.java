@@ -10,9 +10,17 @@ public class Bodyguard extends Co_worker {
         this.nameOfBodyguard = nameOfBodyguard;
     }
 
+    public Bodyguard() {
+    }
+
     String talkOnTheRadio(String nameOfBodyguard) {
         this.nameOfBodyguard = nameOfBodyguard;
         return "Охранник говорит по рации";
+    }
+
+    @Override
+    double comeToWork(String presence, double salary) {
+        return super.comeToWork(presence, salary);
     }
 
     @Override
@@ -20,6 +28,13 @@ public class Bodyguard extends Co_worker {
         System.out.println("Охранник следит за порядком в магазине, отвечает за безопасность сотрудников" +
                 " и имущество");
         return salary;
+    }
+
+    @Override
+    public String toString() {
+        return "Bodyguard{" +
+                "nameOfBodyguard='" + nameOfBodyguard + '\'' +
+                '}';
     }
 
     @Override

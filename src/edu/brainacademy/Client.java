@@ -31,12 +31,13 @@ public class Client {
         return "Клиент узнаёт про товары";
     }
 
-    double buy(double amountOfMoney){
+    double buy(double amountOfMoney) {
         this.amountOfMoney = amountOfMoney;
         System.out.println("Клиент покупает товары");
         double pay = 0;
         return amountOfMoney - pay;
     }
+
 
     @Override
     public String toString() {

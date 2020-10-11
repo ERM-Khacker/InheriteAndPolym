@@ -13,6 +13,9 @@ public class Co_worker {
         this.presence = presence;
     }
 
+    public Co_worker() {
+    }
+
     public String getEmploymentDate() {
         return employmentDate;
     }
@@ -37,28 +40,31 @@ public class Co_worker {
         this.presence = presence;
     }
 
-    String comeToWork(String presence, double salary) {
+    double comeToWork(String presence, double salary) {
         double sal = 0;
         this.presence = presence;
         this.salary = salary;
-        if (presence == "At work"){
-            sal =+ 100;
-            salary = sal;
+        if (presence.equals("At work")) {
+            sal = salary;
+            return sal += 100.0;
+        } else {
+            return 0;
         }
-        return "-10$ from salary";
     }
-    void goToLunch(String presence){
+
+    void goToLunch(String presence) {
         this.presence = presence;
-        if(presence == "On Lunch"){
+        if (presence == "On Lunch") {
             System.out.println("All right");
         }
     }
-    double toDoWork(String presence, double salary){
+
+    double toDoWork(String presence, double salary) {
         this.presence = presence;
         this.salary = salary;
         double money = 500;
         System.out.println("Сотрудник работает");
-        if(presence == "Doing work")
+        if (presence == "Doing work")
             return salary * money;
         else
             return salary * 0;

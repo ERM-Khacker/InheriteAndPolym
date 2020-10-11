@@ -13,6 +13,10 @@ public class Manager extends Co_worker {
         this.department = department;
     }
 
+    public Manager() {
+
+    }
+
     public int getDepartment() {
         return department;
     }
@@ -22,21 +26,33 @@ public class Manager extends Co_worker {
     }
 
     public void consulting() {
-        System.out.println("Консультант рассказывает о товаре");
+        System.out.println("Менеджер рассказывает о товаре");
     }
 
     public void sayAboutDiscount() {
-        System.out.println("Консультант рассказывает о скидках");
+        System.out.println("Менеджер рассказывает о скидках");
     }
 
     public void giveAdvice() {
-        System.out.println("Консультант советует потребителям");
+        System.out.println("Менеджер советует потребителям");
+    }
+
+    @Override
+    double comeToWork(String presence, double salary) {
+        return super.comeToWork(presence, salary);
     }
 
     @Override
     double toDoWork(String presence, double salary) {
         System.out.println("Менеджер отвечает за правильную организацию рабочего процесса");
         return salary;
+    }
+
+    @Override
+    public String toString() {
+        return "Manager{" +
+                "department=" + department +
+                '}';
     }
 
     @Override

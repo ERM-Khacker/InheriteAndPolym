@@ -10,6 +10,9 @@ public class Cashier extends Co_worker {
         this.numberCashBox = numberCashBox;
     }
 
+    public Cashier() {
+    }
+
     public int getNumberCashBox() {
         return numberCashBox;
     }
@@ -22,10 +25,22 @@ public class Cashier extends Co_worker {
     }
 
     @Override
+    double comeToWork(String presence, double salary) {
+        return super.comeToWork(presence, salary);
+    }
+
+    @Override
     double toDoWork(String presence, double salary) {
         System.out.println("Работа кассира заключается в обслуживании клиентов за кассой и в правильном " +
                 "подсчитывании денег");
         return salary;
+    }
+
+    @Override
+    public String toString() {
+        return "Cashier{" +
+                "numberCashBox=" + numberCashBox +
+                '}';
     }
 
     @Override

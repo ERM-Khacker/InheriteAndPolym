@@ -13,20 +13,10 @@ public class Main {
         //-> охранник делает «свою» работу.
         //3)  Магазин закрывается на обед -> сотрудники идут на обед.
         //Для всех классов сгенерировать методы: equals, hashcode и toString
-        Shop shop = new Shop();
-        Client client = new Client("Silpo", 1000);
-        Manager manager = new Manager("23.10.2020", 50, "At work", 1);
-        Cashier cashier = new Cashier("03.12.2018",30,"At work",3);
-        Bodyguard bodyguard = new Bodyguard("19.05.2019",40,"At work","Дядя Стёпа");
-        shop.openUp();
-        shop.sellProduct();
-        System.out.println(client.knowAboutProduct());
-        manager.toDoWork("At work", 50);
-        System.out.println(client.buy(1000));
-        cashier.toDoWork("At work", 30);
-        bodyguard.toDoWork("At work", 40);
-        System.out.println(shop.goToLunch());
-        Human human = new Human("Umar Khalilov Kadyrovich", "0930081469");
+        Shop shop = new Shop("Silpo", "Metallurgists avenue");
+        System.out.println(shop);
+        // Создать конструктор для класса «Человек», в который передать поля «фио» и «номер телефона».
+        Human human = new Human("Some body", "123456789");
         System.out.println(human);
     }
 }
