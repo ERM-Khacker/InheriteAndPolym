@@ -45,7 +45,7 @@ public class Shop {
         cashier.toDoWork("At work", 40);
         cashier.countOfMoney();
         bodyguard.toDoWork("At work", 30);
-        bodyguard.talkOnTheRadio("Васёк");
+        System.out.println(bodyguard.talkOnTheRadio("Васёк"));
     }
 
     public void goToLunch() {

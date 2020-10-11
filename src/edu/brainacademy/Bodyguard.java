@@ -15,7 +15,7 @@ public class Bodyguard extends Co_worker {
 
     String talkOnTheRadio(String nameOfBodyguard) {
         this.nameOfBodyguard = nameOfBodyguard;
-        return "Охранник говорит по рации";
+        return "Охранник " + nameOfBodyguard + " " + "говорит по рации";
     }
 
     @Override
